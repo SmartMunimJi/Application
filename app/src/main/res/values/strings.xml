@@ -2,39 +2,82 @@
 <resources>
     <string name="app_name">Smart Munim Ji</string>
     <string name="splash_loading">Loading...</string>
+
+    <!-- Authentication -->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="new_user_register">New User? Register</string>
+    <string name="new_user_register">New User? Register Here</string>
     <string name="name">Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="address">Address</string>
     <string name="register">Register</string>
-    <string name="welcome_message">Welcome, %s!</string>
-    <string name="add_new_product">Add New Product</string>
-    <string name="view_all_products">View All Products</string>
-    <string name="register_product">Register Your Product</string>
-    <string name="select_seller">Select Seller</string>
-    <string name="order_id">Order ID</string>
-    <string name="date_of_purchase">Date of Purchase</string>
-    <string name="pick_date">Pick Date</string>
-    <string name="my_registered_purchases">My Registered Purchases</string>
-    <string name="products_from_seller">Products from %s</string>
-    <string name="claim_warranty">Claim Warranty</string>
-    <string name="issue_description">Issue Description</string>
-    <string name="submit">Submit</string>
+    <string name="agree_to_terms">I agree to the Terms &amp; Conditions</string>
+    <string name="terms_and_conditions_summary">Read Terms and Conditions</string>
+    <string name="terms_and_conditions_title">Terms and Conditions</string>
+    <!-- IMPORTANT: CDATA block protects special characters. The content inside is plain text. -->
+    <string name="terms_and_conditions"><![CDATA[Smart Munim Ji - Customer Terms and Conditions
+
+By using the Smart Munim Ji App, you agree to the following:
+
+1. Account and Eligibility
+You must be 18+ to use this app. Provide accurate information and keep your login details secure.
+
+2. Our Services
+We help you store digital purchase records, register products, track warranties, raise warranty claims.
+
+3. Your Responsibilities
+- Enter correct purchase details (Order ID, Date, Seller).
+- Do not submit fake claims.
+- Use the app legally and ethically.
+- Follow the original seller/manufacturer\'s warranty terms.
+
+4. Digital Purchase Records
+DPRs are created from verified seller data. These serve as digital proof for warranty claims but may not replace invoices for legal or tax use.
+
+5. Warranty
+Sellers handle all warranty requests. We only help submit and track them.
+
+6. Limitations
+We are not liable for seller issues, product quality, service delays, or app disruptions. Your use is at your own risk.]]></string>
+
+    <!-- Profile -->
+    <string name="name_format">Name: %s</string>
+    <string name="email_format">Email: %s</string>
+    <string name="phone_number_format">Phone: %s</string>
+    <string name="address_format">Address: %s</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="logout">Logout</string>
     <string name="save_changes">Save Changes</string>
+    <string name="profile">Profile</string>
+
+    <!-- Home -->
+    <string name="welcome_message_format">Welcome, %s!</string>
+    <string name="welcome_message_loading">Loading welcome message...</string>
+    <string name="welcome_message_default">Welcome!</string>
+
+    <!-- Products -->
+    <string name="add_new_product">Add New Product</string>
+    <string name="view_all_products">View All Products</string>
+    <string name="register_product">Register Product</string>
+    <string name="select_seller">Select Seller</string>
+    <string name="order_id">Order ID</string>
+    <string name="date_of_purchase">Date of Purchase</string>
+    <string name="my_registered_purchases">My Registered Purchases</string>
+    <string name="products_from_seller">Products from %s</string>
+
+    <!-- Claims -->
+    <string name="claim_warranty">Claim Warranty</string>
+    <string name="issue_description">Issue Description</string>
+    <string name="my_claims">My Claims</string> <!-- Ensure this is the ONLY definition for my_claims -->
+    <string name="claiming_for_product">Claiming for: %s</string>
+    <string name="warranty_claim_status_pending">Pending</string>
+    <string name="warranty_claim_status_approved">Approved</string>
+    <string name="warranty_claim_status_rejected">Rejected</string>
+
+    <!-- Navigation -->
     <string name="home">Home</string>
     <string name="my_products">My Products</string>
-    <string name="offers">Offers</string>
-    <string name="profile">Profile</string>
-    <string name="my_claims">My Claims</string>
-    <string name="terms_and_conditions">Smart Munim Ji – Customer Terms and Conditions\n\nBy using the Smart Munim Ji App, you agree to the following:\n\n1. Account and Eligibility\nYou must be 18+ to use this app. Provide accurate information and keep your login details secure.\n\n2. Our Services\nWe help you store digital purchase records (DPRs), register products, track warranties, raise warranty claims, and view offers from sellers.\n\n3. Your Responsibilities\n- Enter correct purchase details (Order ID, Date, Seller).\n- Do not submit fake claims.\n- Use the app legally and ethically.\n- Follow the original seller/manufacturer\'s warranty terms.\n\n4. Digital Purchase Records\nDPRs are created from verified seller data. These serve as your digital proof for warranty claims but may not replace invoices for legal or tax use.\n\n5. Warranty and Offers\nSellers handle all warranty requests. We only help submit and track them. We also show seller offers, but we are not responsible for their accuracy or fulfillment.\n\n6. Limitations\nWe are not liable for seller issues, product quality, service delays, or app disruptions. Your use is at your own risk.</string>
-    <string name="terms_and_conditions_summary">I agree to the Terms and Conditions</string>
-    <string name="agree_to_terms">Please agree to the Terms and Conditions</string>
-    <string name="terms_and_conditions_title">Terms and Conditions</string>
-    <string name="ok">OK</string>
+
 </resources>

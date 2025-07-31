@@ -1,58 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/margin_small"
-    android:layout_marginBottom="@dimen/margin_small">
+    android:layout_margin="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/margin_small"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/product_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_medium"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
 
-    <TextView
-        android:id="@+id/purchase_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_small"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/product_name"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/margin_small" />
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_large"
+            android:text="Product Name Placeholder"/>
 
-    <TextView
-        android:id="@+id/warranty_end_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_small"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/purchase_date"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/margin_small" />
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="Shop Name Placeholder"
+            android:textColor="@android:color/darker_gray"/>
 
-    <TextView
-        android:id="@+id/warranty_status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_small"
-        app:layout_constraintTop_toBottomOf="@id/warranty_end_date"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/margin_small" />
+        <TextView
+            android:id="@+id/purchaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="Purchased: YYYY-MM-DD"/>
 
-    <Button
-        android:id="@+id/claim_warranty_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/claim_warranty"
-        android:backgroundTint="@color/purple_label"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/warranty_status"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/margin_small" />
+        <TextView
+            android:id="@+id/warrantyEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="Warranty Ends: YYYY-MM-DD"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/warrantyStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="Warranty Status"/>
+
+        <TextView
+            android:id="@+id/daysRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:text="X days remaining"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <Button
+            android:id="@+id/claimWarrantyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/claim_warranty"
+            android:layout_gravity="end"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_small"
+            android:textSize="@dimen/text_size_small"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

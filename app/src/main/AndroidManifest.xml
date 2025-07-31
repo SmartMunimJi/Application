@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.project.smartmunimji">
 
-    <!-- Permissions -->
+    <!-- Permissions required by the application -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Necessary for network operations (API calls) -->
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/aicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/aicon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SmartMunimJi">
+        android:theme="@style/Theme.SmartMunimJi"
+        android:usesCleartextTraffic="true"> <!-- IMPORTANT: For HTTP (non-HTTPS) traffic like localhost -->
 
-        <!-- Splash Activity as Launcher -->
+        <!-- Splash Screen Activity - The first screen of the app -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -28,43 +31,50 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".SplashActivity" />
 
         <!-- Registration Activity -->
         <activity
             android:name=".RegistrationActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".LoginActivity" />
 
-        <!-- Terms and Conditions Activity -->
+        <!-- Terms and Conditions Activity - Accessed from Registration -->
         <activity
             android:name=".TermsAndConditionsActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".RegistrationActivity" />
 
-        <!-- Main Activity -->
+        <!-- Main Activity - Hosts fragments via Bottom Navigation -->
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".LoginActivity" />
 
-        <!-- Add Product Activity -->
+        <!-- Add Product Activity - For registering new products -->
         <activity
             android:name=".AddProductActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".MainActivity" />
 
-        <!-- View All Products Activity -->
+        <!-- View All Products Activity - Lists customer's registered products -->
         <activity
             android:name=".ViewAllProductsActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".MainActivity" />
 
-        <!-- Seller Products Activity -->
+        <!-- Claim Warranty Activity - For submitting a claim for a specific product -->
+        <activity
+            android:name=".ClaimWarrantyActivity"
+            android:exported="false"
+            android:parentActivityName=".ViewAllProductsActivity" />
+
+        <!-- Seller Products Activity - Lists products from a specific seller (customer's view) -->
         <activity
             android:name=".SellerProductsActivity"
             android:exported="false"
-            android:theme="@style/Theme.SmartMunimJi.NoActionBar" />
+            android:parentActivityName=".ViewAllProductsActivity" />
+
 
     </application>
 

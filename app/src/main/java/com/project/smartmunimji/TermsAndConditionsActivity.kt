@@ -1,3 +1,5 @@
+// app/src/main/java/com/project/smartmunimji/TermsAndConditionsActivity.kt
+
 package com.project.smartmunimji
 
 import android.os.Bundle
@@ -13,12 +15,14 @@ class TermsAndConditionsActivity : AppCompatActivity() {
         binding = ActivityTermsAndConditionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set T&C text
-        binding.termsText.text = getString(R.string.terms_and_conditions)
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // OK button to return
-        binding.okButton.setOnClickListener {
-            finish()
-        }
+        binding.termsText.text = getString(R.string.terms_and_conditions)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

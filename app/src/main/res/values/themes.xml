@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.SmartMunimJi" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <!-- Base application theme. -->
+    <style name="Theme.SmartMunimJi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Primary brand color -->
         <item name="colorPrimary">@color/purple_label</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/light_purple</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/purple_label</item>
-        <item name="colorSecondaryVariant">@color/purple_700</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/light_purple</item>
+        <item name="colorSecondaryVariant">@color/light_purple</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/dark_gray_text</item>
+        <item name="android:textColorSecondary">@color/medium_gray_text</item>
+
+        <!-- Control colors (for checkboxes, radio buttons etc.) -->
+        <item name="colorAccent">@color/purple_label</item>
+
+        <!-- Background color of activities / fragments -->
+        <item name="android:colorBackground">@color/light_gray_background</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/dark_gray_text</item>
     </style>
 
     <style name="Theme.SmartMunimJi.NoActionBar" parent="Theme.SmartMunimJi">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <!-- Optional: If you want a specific theme for the splash screen without an action bar -->
+    <style name="Theme.SmartMunimJi.Splash" parent="Theme.SmartMunimJi.NoActionBar">
+        <item name="android:windowBackground">@drawable/background2</item>
+        <!-- You might want to adjust status bar color specific to splash if needed -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
 </resources>

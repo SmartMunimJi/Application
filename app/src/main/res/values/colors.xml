@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_label">#8A2BE2</color>
+    <!-- Primary Brand Colors (our custom palette) -->
+    <color name="purple_label">#6A0DAD</color> <!-- Our main purple -->
+    <color name="light_purple">#E0BBE4</color> <!-- Our lighter purple for accents -->
+
+    <!-- Standard Material Design Colors (REQUIRED by default themes) -->
+    <color name="purple_200">@color/light_purple</color>
+    <color name="purple_500">@color/purple_label</color>
+    <color name="purple_700">#4A098E</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- General UI Colors -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="purple_200">#E1BEE7</color>
-    <color name="purple_700">#7B1FA2</color>
-    <color name="teal_200">#80DEEA</color>
-    <color name="teal_700">#00838F</color>
-    <color name="green_warranty">#4CAF50</color>
-    <color name="red_warranty_expired">#F44336</color>
+    <color name="dark_gray_text">#333333</color>
+    <color name="medium_gray_text">#666666</color>
+    <color name="light_gray_background">#F8F8F8</color>
+    <color name="border_color">#DDDDDD</color>
+
+    <!-- Status Colors -->
+    <color name="green_warranty">#28a745</color>
+    <color name="red_warranty_expired">#dc3545</color>
+    <color name="blue_status_in_progress">#007bff</color>
+
+    <!-- Bottom Navigation Colors -->
+    <color name="bottom_nav_selected">@color/purple_label</color>
+    <color name="bottom_nav_unselected">@color/medium_gray_text</color>
+    <!-- FIX: Define bottom_nav_color by pointing it to bottom_nav_selected -->
+    <color name="bottom_nav_color">@color/bottom_nav_selected</color>
 </resources>
